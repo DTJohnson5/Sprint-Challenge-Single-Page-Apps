@@ -5,6 +5,7 @@ import WelcomePage from "./components/WelcomePage.js";
 import CharacterList from './components/CharacterList';
 import LocationsList from './components/LocationsList';
 import EpisodeList from './components/EpisodeList';
+import CharacterSearch from './components/Search';
 import { Route } from 'react-router-dom';
 
 export default function App() {
@@ -13,9 +14,10 @@ export default function App() {
       <Header />
       <TabNav />
       <Route exact path='/' component={WelcomePage}/>
-      <Route exact path='/characters' component={CharacterList}/>
-      <Route exact path='/locations' component={LocationsList}/>
-      <Route exact path='/episodes' component={EpisodeList}/>
+      <Route path='/characters' component={CharacterList}/>
+      <Route path='/locations' component={LocationsList}/>
+      <Route path='/episodes' component={EpisodeList}/>
+      <Route path='/search' component={CharacterSearch}/>
     </main>
   );
 }
